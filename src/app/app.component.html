@@ -1,0 +1,47 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<div>
+  <h1>  Welcome to {{title}} </h1>
+  
+<!--<ul id="myUL">
+  <li *ngFor="let student of students" #i>
+    <span class="badge">{{student.id}}</span>{{student.name}}
+    <!--<label (dblclick)="student.editing = true" id="divId">
+    <input class="edit"
+         #updatedTodo
+         [value]="student.name"
+         (blur)="updateTodo(student, updatedTodo.value)"
+         (keyup.escape)="student.editing = true"
+         (keyup.enter)="updateTodo(student, updatedTodo.value)">
+    </label>-->
+    <!--<button (click)="del(i.value)" class="close">X</button>
+  </li>
+</ul>-->
+<table id="myUL">
+  <tr>
+    <th>
+      Roll No
+    </th>
+    <th>Name</th>
+  </tr>
+ 
+  <tr *ngFor="let student of students; let i=index">
+    <td contentEditable>{{student.id}}
+    </td>
+     <td contentEditable>{{student.name}}</td>
+    <!--<td>{{student.name}}
+    </td>-->
+    <td><a (click)="del(i)" class="close">x</a></td>
+  </tr>
+ 
+ 
+</table>
+
+<input type="textbox" #data>
+<button (click)="add(data.value )">Add Student</button>
+<div>
+    <a routerLink="/AddStudent" routerLinkActive="active">jhjhj</a>
+</div>
+<div [class.active]="true">
+  <!--<router-outlet></router-outlet>-->
+</div>
